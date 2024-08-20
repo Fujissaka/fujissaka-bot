@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <category>
-    <pattern>*</pattern>
-    <template>I have no answer for that.</template>
-  </category>
+    
+    <category>
+        <pattern>OI</pattern>
+        <template>
+            <random>
+                <li>Olá, sou o botFujissaka. Qual o seu nome?</li>
+                <li>Oi, sou botFujissaka. Qual o seu nome?</li>
+            </random>
+        </template> 
+    </category>
+    
+    <category>
+        <pattern>OLÁ</pattern>
+        <template>
+            <srai>OI</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>SALVE</pattern>
+        <template>
+            <srai>OI</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MEU NOME É *</pattern>
+        <template>
+            Muito prazer<think> <set name="usuario"> <star /> </set> </think>! Você gosta de futebol?
+        </template>
+    </category>
+    
+    <category>
+        <pattern>GOSTO</pattern>
+        <template>Para qual time você torce?</template>
+    </category>
+    
+    <category>
+        <pattern>CORINTHIANS</pattern>
+        <that>Para qual time você torce</that>
+        <template> VAI CURINTIA, <get name="usuario"/> você é uma pessoa de cultura! </template>
+    </category>   
+    <category>
+        <pattern>*</pattern>
+        <template> VAI CURINTIA! </template> 
+    </category>
 </aiml>
